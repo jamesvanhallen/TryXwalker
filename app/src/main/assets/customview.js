@@ -18,7 +18,8 @@
 //    //'use strict';
 //   //PDFJS.disableWorker = false;
    PDFJS.workerSrc = 'file:///android_asset/build/pdf.worker.js';
-//
+
+
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
@@ -27,9 +28,10 @@
         canvas = document.getElementById('the-canvas'),
         ctx = canvas.getContext('2d');
 
+
        var container = document.getElementById('viewerContainer');
 
-       // (Optionally) enable hyperlinks within PDF files.
+
        var pdfLinkService = new PDFJS.PDFLinkService();
 
        var pdfViewer = new PDFJS.PDFViewer({
@@ -38,19 +40,15 @@
        });
        pdfLinkService.setViewer(pdfViewer);
 
-       // (Optionally) enable find controller.
+       // Link server is not so nessasory
        var pdfFindController = new PDFJS.PDFFindController({
          pdfViewer: pdfViewer
        });
        pdfViewer.setFindController(pdfFindController);
 
        container.addEventListener('pagesinit', function () {
-         // We can use pdfViewer now, e.g. let's change default scale.
          pdfViewer.currentScaleValue = 'page-width';
 
-//         if ("code") { // We can try search for things
-//           pdfFindController.executeCommand('find', {query: "code"});
-//         }
        });
 
 
@@ -84,6 +82,8 @@
           }
         });
       });
+
+      //alerts for pages displaying
       alert("_total"+pdfDoc.numPages);
       alert("_cur"+pageNum);
 
