@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" mozdisallowselectionprint moznomarginboxes>
 <head>
-    <link rel="stylesheet" href="file:///android_asset/minimal.css"/>
-	   <script type="text/javascript" src="file:///android_asset/build/compatibility.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate">
+    <title>PDF.js viewer using built components</title>
 
+    <style>
+        body {
+        background-color: #808080;
+        margin: 0;
+        padding: 0;
+        }
+        #viewerContainer {
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        }
+    </style>
 
-	  <!--  horrible hack needs fix-->
+    <link rel="stylesheet" href="file:///android_asset/minimal.css">
 
-<script type="text/javascript">
-var url = "reggggegggegeg";
-</script>
+    <!-- for legacy browsers -->
+    <script src="file:///android_asset/build/compatibility.js"></script>
+
+    <script src="file:///android_asset/build/pdf.js"></script>
+    <script src="file:///android_asset/build/pdf_viewer.js"></script>
+
+    <script type="text/javascript">
+    var url = "reggggegggegeg";
+    </script>
 
 </head>
-<body>
 
+<body tabindex="1">
 
-<!-- I think the troubles here -->
 <div id="viewerContainer">
-    <canvas id="the-canvas" style="border:0px solid black"></canvas>
+    <div id="viewer" class="pdfViewer"></div>
 </div>
 
-
-
-  <!-- Use latest PDF.js build from Github -->
-  <script type="text/javascript" src="file:///android_asset/build/pdf.js"></script>
-  <script type="text/javascript" src="file:///android_asset/build/pdf_viewer.js"></script>
-  <script type="text/javascript" src="file:///android_asset/customview.js"></script>
-
-
-
+<script src="file:///android_asset/simpleviewer.js"></script>
 </body>
 </html>

@@ -103,7 +103,7 @@ public class PDFFragment extends Fragment implements  MyXwalkView.TouchEventList
 
                 @Override
                 public boolean onQueryTextSubmit(String query) {
-                    webView.load("javascript:findWord(\"" + query + "\")", null);
+                    webView.load("javascript:findWord('" + query + "')", null);
                     Log.d(TAG, "Find all async " + query);
                     return false;
                 }
@@ -167,7 +167,7 @@ public class PDFFragment extends Fragment implements  MyXwalkView.TouchEventList
             public boolean onSwipeLeft(int i, long l, double v) {
                 Log.d(TAG, "left " + " l " + l + " v " + v);
                 if(v>250){
-                    webView.load("javascript:onNextPage()", null);
+                    webView.load("javascript:nextPage()", null);
                 }
 
                 return false;
