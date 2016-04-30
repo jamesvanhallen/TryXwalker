@@ -49,14 +49,6 @@ var pdfFindController = new PDFJS.PDFFindController({
 });
 pdfViewer.setFindController(pdfFindController);
 
-container.addEventListener('pagesinit', function () {
-  // We can use pdfViewer now, e.g. let's change default scale.
-  pdfViewer.currentScaleValue = 'page-width';
-
-
-    pdfFindController.executeCommand('find', {query: 'Совершенный'});
-
-});
 
 // Loading document.
 PDFJS.getDocument(url).then(function (pdfDocument) {

@@ -67,7 +67,7 @@
   display: block;
   position: absolute;
   left: 0px;
-  top: 100%;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   z-index: -1;
@@ -95,9 +95,6 @@
   height: 100%;
 }
 
-.annotationLayer .linkAnnotation > a /* -ms-a */  {
-  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
-}
 
 .annotationLayer .linkAnnotation > a:hover {
   opacity: 0.2;
@@ -168,6 +165,15 @@
   border: none;
 }
 
+.pdfViewer.singlePageView {
+  display: inline-block;
+}
+
+.pdfViewer.singlePageView .page {
+  margin: 0;
+  border: none;
+}
+
 .pdfViewer .page canvas {
   margin: 0;
   display: block;
@@ -180,7 +186,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: url('images/loading-icon.gif') center no-repeat;
+
 }
 
 .pdfPresentationMode:-webkit-full-screen .pdfViewer .page {

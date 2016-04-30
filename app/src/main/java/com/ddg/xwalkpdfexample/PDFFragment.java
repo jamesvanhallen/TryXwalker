@@ -35,6 +35,7 @@ import java.io.OutputStream;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import in.championswimmer.sfg.lib.SimpleFingerGestures;
 import rx.subscriptions.CompositeSubscription;
 
@@ -176,7 +177,7 @@ public class PDFFragment extends Fragment implements  MyXwalkView.TouchEventList
             @Override
             public boolean onSwipeRight(int i, long l, double v) {
                 if(v>250){
-                    webView.load("javascript:onPrevPage()", null);
+                    webView.load("javascript:prevPage()", null);
                 }
                 Log.d(TAG, "onSwipeRight " + " l " + l + " v " + v);
                 return false;
@@ -241,6 +242,10 @@ public class PDFFragment extends Fragment implements  MyXwalkView.TouchEventList
         super.onDestroyView();
     }
 
+    @OnClick(R.id.next)
+    void onNextClick(){
+        webView.load("javascript:nextPage()", null);
+    }
 
 
     @Override

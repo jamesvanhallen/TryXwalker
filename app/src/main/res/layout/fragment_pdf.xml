@@ -27,6 +27,12 @@
     android:id="@+id/currentPage"
     android:layout_centerInParent="true"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:id="@+id/next"/>
+
     </RelativeLayout>
 
 </RelativeLayout>
