@@ -46,9 +46,15 @@ var textLayerFactory = {
 };
 
 // Loading document.
+
+drawPage();
+
+function drawPage(){
 PDFJS.getDocument(url).then(function (pdfDocument) {
   pdfViewer.pdfDocument = pdfDocument;
   pdfFindController.resolveFirstPage();
+
+
   // Document loaded, retrieving the page.
   return pdfDocument.getPage(PAGE_TO_VIEW).then(function (pdfPage) {
     // Creating the page view with default parameters.
@@ -67,19 +73,25 @@ PDFJS.getDocument(url).then(function (pdfDocument) {
     return pdfPageView.draw();
   });
 });
-
-setTimeout(function () { pdfFindController.executeCommand('find', {query: "КОД"}); }, 3000);
+}
 
 function findWord(word){
        pdfFindController.executeCommand('find', {query: word});
 }
 
+function findNext(word){
+       pdfFindController.executeCommand('findNext', {query: word});
+}
+
 function nextPage(){
+
+  container.innerHTML = "";
   PAGE_TO_VIEW++;
-  pdfViewer.scrollPageIntoView(PAGE_TO_VIEW);
+  drawPage();
 }
 
 function prevPage(){
+  container.innerHTML = "";
   PAGE_TO_VIEW--;
-  pdfPageView.getPage(PAGE_TO_VIEW);
+  drawPage();
 }
