@@ -244,7 +244,7 @@ public class PDFFragment extends Fragment implements  MyXwalkView.TouchEventList
 
     @OnClick(R.id.next)
     void onNextClick(){
-        webView.load("javascript:nextPage()", null);
+        webView.load("javascript:findNext()", null);
     }
 
 
