@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint moznomarginboxes>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes"/>
+
+    <meta name="google" content="notranslate">
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        var url = "https://cdn.mozilla.net/pdfjs/tracemonkey.pdf";
+        var PAGE_TO_VIEW = 1;
+    </script>
+    <link rel="stylesheet" href="pdf_viewer.css">
+
+    <script src="build/compatibility.js"></script>
+
+    <script src="build/pdf.js"></script>
+    <script src="build/pdf_viewer.js"></script>
+</head>
+
+<body tabindex="1">
+<div id="pageContainer" class="pdfViewer">
+    <div id="page" class="pdfViewer singlePageView"> </div>
+</div>
+
+<div id="next">
+    <h3>Next</h3>
+
+</div>
+
+<script type="text/javascript" src="pageviewer.js"></script>
+
+</body>
+</html>

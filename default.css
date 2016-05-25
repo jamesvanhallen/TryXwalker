@@ -1,0 +1,44 @@
+body {
+
+}
+
+#main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#area {
+    width: 100%;
+    height: 100%;
+}
+
+#area iframe {
+    border: none;
+}
+
+@font-face {
+    font-family: 'FreeSerif';
+    src: url('file:///android_asset/font/FreeSerif.ttf');
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('file:///android_asset/font/NotoSans.ttf');
+}
+
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('file:///android_asset/font/NotoSerif.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('file:///android_asset/font/OpenSans.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('file:///android_asset/font/Roboto.ttf');
+}
